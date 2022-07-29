@@ -1,0 +1,96 @@
+/*estilo del cuerpo*/
+*{
+    margin: 0px 0px 0px 0px ;
+    padding: 0px 0px 0px 0px ;
+
+    box-sizing: border-box;
+}
+
+.texto  figure{
+    text-align: center;
+}
+
+footer, .header {
+    background:rgb(0, 0, 0);
+    
+}
+
+.footer  {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.836);
+    padding: 2%;
+    box-sizing: border-box;
+    color: seashell;
+    text-align: center;
+    font-size: 17px;
+    font-family:'Baloo Tamma 2', sans-serif;  
+}
+
+
+/*Estilodelmenu*/
+ul, ol {
+    list-style:none;
+}
+.nav > li {
+    float:right;
+}
+.nav li a {
+    background-color:black;
+    color:#fff;
+    text-decoration:none;
+    padding:58px 70px;
+    display:block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav li a:hover{
+    background-color: gray;
+}
+
+.header img{
+    margin: 15px 0px 15px 100px;
+    width: 305px;
+    height: 106px;    
+}
+
+/* CONTENIDO */
+
+.container{
+    padding: 0px 50px 25px 15px;
+}
+.container p, h1{
+    color:rgb(0, 0, 0);
+    font-family:'Baloo Tamma 2', sans-serif;
+}
+.texto h1{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.texto p{
+    text-align:center;
+    padding-bottom: 15px;
+}
+
+
+/*Boton de calcular*/
+.btn{
+    text-transform: uppercase;
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-size: 1em;
+    font-weight: 700    ;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    margin: 16px 25px 70px 25px;
+    padding: 15px;
+    border-radius: 30px;
+    width: 95%;
+    padding: 50%;
+    
+}
+.btn:hover{
+    background-color:#276031 ;
+}
+.btn:active{
+    box-shadow: inset 0 0 20px rgb(255, 255, 255);
+}
+

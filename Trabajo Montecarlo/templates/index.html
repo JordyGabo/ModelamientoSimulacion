@@ -1,0 +1,57 @@
+<head>  
+    <link rel="icon" type="jpg" href="/static/img/icono.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Modelamiento Simulacion</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <style> header{ background: black; }</style> 
+    <link href="/static/css/main.css" rel="stylesheet" />
+
+    <header class="header"> 
+        <nav class="menu">
+            <ul class ="nav">
+                <li><a href="/montecarlo"> Montacarlo </a> </li>
+                <li> <a href="/montecarlo-resultado"> Resultado </a> </li>
+            </ul>
+        </nav>
+        <!-- <figure class="logo">
+            <img src="/static/img/logo_uleam.png" alt="Tutorships"/>          
+        </figure>    -->
+        </div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </header>
+</head>
+
+<div class="Texto">
+    <h1>¿Que es Montecarlo?</h1>
+    <p class="text2">La simulación de Monte Carlo, también conocida como el Método de Monte Carlo o una simulación de probabilidad múltiple, es una técnica matemática que se utiliza para estimar los posibles resultados de un evento incierto. El método de Monte Carlo fue inventado por John von Neumann y Stanislaw Ulam durante la Segunda Guerra Mundial para mejorar la toma de decisiones en condiciones de incertidumbre. Su nombre proviene de un conocido casino en Mónaco, ya que el elemento del azar es el núcleo del enfoque de modelado, similar a un juego de ruleta.</p>
+
+    <figure class="logo">
+        <img src="/static/img/monte-carlo.jpg" alt="montecarlo" />          
+    </figure>   
+
+    <h1>EJERCICIO</h1>
+    <p class="text2">La demanda semanal de leche de las ultimas 50 semanas en la tienda aparece en la siguiente tabla</p>
+    <p class="text2">a) Asigne la distribucion de probabilidades apropiada a la demanda de manera que la probabilidad de una demanda particular en la simulacion sea igual a la frecuancia relativa de esa demanda en las ultimas 50 semanas</p>
+    <p class="text2">b) La tienda ordena 42 cajas todas las semanas. ¿cual es el faltante promedio y el sobrante promedio en los inventarios de 20 semanas simulado con los numeros aleatorios?</p>
+</div>
+
+
+<div class="container" style="margin-top:15px;">
+    <center> {{n1|safe}}</center>
+</div>
+
+
+<div id="ingresoestudiante" class="flex-center">  
+    <form action="./INICIOESTUDIANTE.html" method="POST" name="ENVIAR" >
+            <div class="b_inicio">
+                <a  class="btn" onclick=location.href="/montecarlo-resultado"> CALCULAR</a>                        
+            </div>
+    </form>       
+</div>
+
+<footer class="footer"> 
+    <p class="text2">Jordy Gabriel Pico Vargas </p>
+    <p class="text2">FACCI - 6to Nivel</p>
+    <p class="text2">2022</p>
+</footer>
