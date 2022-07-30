@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="jpg" href="/static/icono.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" >
+
+        <ul class="nav nav-tabs">
+            <!-- IMAGEN DEL MENU -->
+            <a class="navbar-brand" href="/"><img src="{{url_for('static', filename = 'logo_uleam.png')}}" 
+                style="width: 250px; height: 80px; padding-left:10px;" alt="Uleam">
+
+            <li class="nav-item"><a class="nav-link" href=""></a></li>
+            <li class="nav-item" style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/datos">DataSet</a>
+            </li>
+            <!-- <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/analisis">Analisis</a>
+            </li> -->
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/cuadradosMedios">Cuadrados</a>
+            </li>
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/congruenciaLineal">Lineal</a>
+            </li>
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/congruencialMultiplicativo">Multiplicativo</a>
+            </li>
+            <!-- <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/distribucionPoisson">Poisson</a>
+            </li> -->
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/promedioMovil">Promedio móvil</a>
+            </li>
+            <!-- <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/suavizacionExponencial">Suavización</a>
+            </li> -->
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/regresionCuadratica">Reg.Cuadratica</a>
+            </li>
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/regresionLineal">Reg.Lineal</a>
+            </li>
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/sistemaMontecarlo">Montecarlo</a>
+            </li>
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/inventario">Inventario</a>
+            </li>
+            <li class="nav-item"  style="padding: 0.5% 0%;">
+                <a class="nav-link" href="/banco">Respuesta</a>
+            </li>
+
+        </ul>    
+    </nav>
+    
+    <div class="container">
+        {% block content %}
+
+        {% endblock %}
+            <footer class="footer" style="margin-top: 50px;"> 
+                <p class="text2">Jordy Gabriel Pico Vargas </p>
+                <p class="text2">FACCI - 6to Nivel</p>
+                <p class="text2">2022</p>
+            </footer>
+        </nav>
+    </div>
+</body>
+
+</html>

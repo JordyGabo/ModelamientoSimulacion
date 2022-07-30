@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %} Promedio movil {% endblock %}
+{% block content %}
+<br><br>
+<div class="card bg-dark text-white">
+    <img src="{{ url_for('static', filename='fondo.jpg') }}" style="opacity:0.4; filter:alpha(opacity=50); height: 445px;"
+        class="card-img" alt="Boutique Fashion">
+    <div class="card-img-overlay">
+        <div class="row">
+            <div class="col-sm-6">
+                <br><br><br>
+                <div class="card">
+                    <div class="card-body">
+                        <center>
+                            <h4 class=" card1 card-title">Regresion Cuadratica</h4>
+                        </center>
+                        <p class="card-text" align='justify'>El modelo de regresión cuadrática es una alternativa cuando
+                            el modelo lineal no
+                            logra un coeficiente de determinación apropiado, o cuando el fenómeno en estudio tiene un
+                            comportamiento que puede considerarse como parabólico. La forma más simple de tratar de
+                            establecer
+                            la tendencia es a través de un diagrama de dispersión o nube de puntos</p>
+                        <a href="/regresionCuadratica" class="btn btn1 btn-outline-secondary">Visitar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <br><br><br>
+                <div class="card">
+                    <div class="card-body">
+                        <center>
+                            <h4 class=" card1 card-title">Regresion Lineal</h4>
+                        </center>
+                        <p class="card-text" align='justify'>La regresión lineal es una técnica de modelado estadístico
+                            que se emplea para
+                            describir una variable de respuesta continua como una función de una o varias variables
+                            predictoras.
+                            Puede ayudar a comprender y predecir el comportamiento de sistemas complejos o a analizar
+                            datos
+                            experimentales, financieros y biológicos. Ademas, es el proceso de encontrar la
+                            ecuación de la parábola. </p>
+                        <a href="/regresionLineal" class="btn btn1 btn-outline-secondary">Visitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

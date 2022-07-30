@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %} Montecarlo {% endblock %}
+{% block content %}
+{% if error %}
+<div class="alert alert-danger" role="alert">
+    {{ error }}
+</div>
+{% endif %}
+
+<!-- CONTENIDO -->
+<div class="texto">
+    <h1>¿QUE ES EL SISTEMA MOTECARLO?</h1>
+    <p class="text2">La simulación de Monte Carlo, también conocida como el Método de Monte Carlo o una simulación de probabilidad múltiple, es una técnica matemática que se utiliza para estimar los posibles resultados de un evento incierto. El método de Monte Carlo fue inventado por John von Neumann y Stanislaw Ulam durante la Segunda Guerra Mundial para mejorar la toma de decisiones en condiciones de incertidumbre. Su nombre proviene de un conocido casino en Mónaco, ya que el elemento del azar es el núcleo del enfoque de modelado, similar a un juego de ruleta.</p>
+
+    <figure class="img">
+        <img src="/static/monte-carlo.jpg" alt="montecarlo" />          
+    </figure> 
+</div>    
+
+<form enctype="multipart/form-data" method="POST" action="{{url_for('calcularMontecarlo')}}"><br>
+    <center>
+        <br> <br> 
+        <div class="w3-container w3-teal">
+            <h1><strong>SISTEMA MONTECARLO</strong></h1>
+        </div>
+        <br>
+    </center>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <h5 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Congruencia Lineal
+                            </h5>
+                            <hr><br>
+                            <div class="input-group mb-3">
+                                <input name="numeroIteraciones" type="number" class="form-control"
+                                    id="validationDefault01" placeholder="Iteracciones" required>
+                                <input name="semilla" type="number" class="form-control" id="validationDefault02"
+                                    placeholder="Semilla" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input name="multiplicador" type="number" class="form-control" id="validationDefault01"
+                                    placeholder="a" required>
+                                <input name="incremento" type="number" class="form-control" id="validationDefault02"
+                                    placeholder="c" required>
+                                <input name="modulo" type="number" class="form-control" id="validationDefault01"
+                                    placeholder="m" required>
+                            </div><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-row">
+                                <h5 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> Subir Archivo
+                                </h5>
+                                <hr><br>
+                                <div class="input-group mb-3">
+                                    <form class="row g-6">
+                                        <div class="col-md-8">
+                                            <input name="file" type="file" class="form-control form-data" id="exampleFormControlFile1">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select id="inputState" name='tipoarchivo' class="form-select">
+                                                <option value="1">Excel</option>
+                                                <option value="2">csv </option>
+                                                <option value="3">json</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input name="x" type="text" class="form-control" id="validationDefault01"
+                                        placeholder="Columna x" required>
+                                    <input name="y" type="text" class="form-control" id="validationDefault01"
+                                        placeholder="Columna y" required>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <br>
+        <center>
+            <!-- BOTONES  -->
+            <button type="submit" class="btn btn2 btn-outline-secondary" style="width: 1200px;">Calcular</button>
+        </center>
+    </div>
+    </div>
+</form>
+
+{% endblock %}

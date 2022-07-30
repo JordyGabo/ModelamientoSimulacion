@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block title %} Regresión cuadrática {% endblock %}
+{% block content %}
+<div id="app">
+    {% if imagen %}
+    <center>
+        <br> <br> 
+        <div class="w3-container w3-teal">
+            <h1><strong>RESULTADOS DE LA REGRESION CUADRATICA</strong></h1>
+        </div>
+        <br>
+    </center>
+
+    <br>
+    <div class="card my-3 w-100" style="background:rgba(213, 172, 172, 0.365);">
+        <div class="alert alert1 alert-danger" role="alert">
+            <div class="row g-0">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <center>
+                            <div class="carousel-item active">
+                                <img src="data:image/png;base64,{{imagen}}" class="img-fluid rounded-start"
+                                    alt="grafica">
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    {% else %}
+        <br><br><br> <br>
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    <div class="card">
+
+    
+        <!-- CONTENIDO -->
+        <div class="texto">
+            <h1>¿QUE ES REGRESION CUADRATICA?</h1>
+            <p class="text2">El modelo de regresión cuadrática es una alternativa cuando
+                el modelo lineal no
+                logra un coeficiente de determinación apropiado, o cuando el fenómeno en estudio tiene un
+                comportamiento que puede considerarse como parabólico. La forma más simple de tratar de
+                establecer
+                la tendencia es a través de un diagrama de dispersión o nube de puntos</p>
+        
+            
+        </div>
+
+    
+        <div class="card-body" style="background:rgba(134, 134, 236, 0.365);">
+            <form action="/regresionCuadratica" method="post">
+                <center>
+                    <br> 
+                    <div class="w3-container w3-teal">
+                        <h1><strong>REGRESION CUADRATICA</strong></h1>
+
+                    </div>
+                    <br>
+                </center>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Nombre del eje X" name="xlbl" v-model='xlbl'>
+                        <input type="text" class="form-control" placeholder="Nombre del eje Y" name="ylbl" v-model="ylbl">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <textarea name="x" rows="3" class="form-control"
+                        placeholder="Datos del eje X (solo numeros seperados por , )" v-model="x"></textarea>
+                        <textarea name="y" rows="3" class="form-control"
+                        placeholder="Datos del eje Y (solo numeros seperados por , )" v-model="y"></textarea>
+                    </div>
+                </div>
+                <br>
+                <center>
+                    <!-- BOTONES  -->
+                    <button type="submit" class="btn btn2 btn-outline-secondary" style="width: 1200px;">Calcular</button>
+                    <button class="btn btn1 btn-outline-secondary" style="width: 1200px;"
+                        @click="llenarCampos()">Mostrar Resultados de la DataSet</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+</div>
+<script>
+    const app = {
+        data() {
+            return {
+                xlbl: null,
+                x: null,
+                ylbl: null,
+                y: null
+            }
+        },
+        methods: {
+            llenarCampos() {
+                this.xlbl = 'Compra';
+                this.ylbl = 'Venta';
+                this.x = '200, 345, 754, 219, 187,  984, 1021,153,784, 954, 123, 678, 512, 643,432';
+                this.y = '101, 543, 811, 101, 1044, 460, 993,131, 603, 849, 709, 350, 165, 510,270';
+            }
+        }
+    }
+    Vue.createApp(app).mount("#app")
+</script>
+{% endblock %}

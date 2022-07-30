@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %} Análisis de datos {% endblock %}
+{% block content %}
+<center>
+  <br>
+  <div class="w3-container w3-teal">
+      <h2 style="font-family:'Brush Script MT'; font-size:50px;"><strong>Analisis de los datos de 
+          stock en la Boutique "Fashion"</strong>
+  </div>
+  <br>
+</center>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="data:image/png;base64,{{imagen1}}" class="img-fluid rounded-start" alt="grafica">
+      <div class="card-body">
+        <h5 class="card-title">Total facturado de las compras y ventas en la Boutique</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+       <img src="data:image/png;base64,{{imagen2}}" class="img-fluid rounded-start" alt="grafica">
+      <div class="card-body">
+        <h5 class="card-title">Frecuencia de compras y ventas de acuerdo al cliente</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="data:image/png;base64,{{imagen3}}" class="img-fluid rounded-start" alt="grafica">
+      <div class="card-body">
+        <h5 class="card-title">Frecuencia de proecio de productos de acuerdo a los proveedores</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="data:image/png;base64,{{imagen4}}" class="img-fluid rounded-start" alt="grafica">
+      <div class="card-body">
+        <h5 class="card-title">Frecuencia de los productos comprados o vendidos</h5>
+      </div>
+    </div>
+  </div>
+</div> <br><br>
+
+{% endblock %}
